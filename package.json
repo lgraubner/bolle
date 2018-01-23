@@ -1,0 +1,46 @@
+{
+  "name": "rotator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgraubner/rotator.git"
+  },
+  "author": "Lars Graubner <mail@larsgraubner.de> (https://larsgraubner.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lgraubner/rotator/issues"
+  },
+  "homepage": "https://github.com/lgraubner/rotator#readme",
+  "dependencies": {
+    "date-fns": "1.29.0",
+    "express": "4.16.2",
+    "express-handlebars": "3.0.0",
+    "express-minify-html": "0.12.0",
+    "helmet": "3.10.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.2.1",
+    "eslint": "4.16.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.5.1",
+    "husky": "0.14.3",
+    "lint-staged": "6.0.1",
+    "prettier": "1.10.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
