@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/lgraubner/rotator/issues"
   },
-  "homepage": "http://bolle.larsgraubner.de",
+  "homepage": "https://bolle.larsgraubner.de",
   "dependencies": {
     "date-fns": "1.29.0",
     "react": "^16.2.0",
