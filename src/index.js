@@ -24,7 +24,7 @@ let baseDate = BASE_DATE
 
 const tmpDate = pathParts.length && pathParts[1]
 // validate date input
-if (!Number.isNaN(Date.parse(tmpDate))) {
+if (tmpDate && !Number.isNaN(Date.parse(tmpDate))) {
   baseDate = tmpDate
 }
 
