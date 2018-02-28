@@ -1,20 +1,20 @@
 {
-  "name": "rotator",
+  "name": "bolle",
   "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lgraubner/rotator.git"
+    "url": "git+https://github.com/lgraubner/bolle.git"
   },
   "author": "Lars Graubner <mail@larsgraubner.de> (https://larsgraubner.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lgraubner/rotator/issues"
+    "url": "https://github.com/lgraubner/bolle/issues"
   },
   "homepage": "https://bolle.larsgraubner.de",
   "dependencies": {
     "date-fns": "1.29.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
     "react-scripts": "1.1.1"
   },
   "scripts": {
@@ -31,13 +31,22 @@
     ]
   },
   "devDependencies": {
-    "eslint": "4.17.0",
-    "eslint-config-airbnb": "16.1.0",
-    "eslint-plugin-import": "2.8.0",
-    "eslint-plugin-jsx-a11y": "6.0.3",
-    "eslint-plugin-react": "7.6.1",
+    "babel-eslint": "8.2.2",
+    "eslint": "4.18.1",
+    "eslint-config-react-app": "2.1.0",
+    "eslint-plugin-flowtype": "2.46.1",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.7.0",
     "husky": "0.14.3",
-    "lint-staged": "6.1.0",
-    "prettier": "1.10.2"
+    "lint-staged": "7.0.0",
+    "prettier": "1.11.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }
