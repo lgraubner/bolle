@@ -1,4 +1,4 @@
-# 🐶 Bolle
+# bolle
 
 Simple webservice to rotate a number. By default it will rotate from 1 to 5, starting over when reached 5. Number is calculated by the start date `2018-01-1`.
 
