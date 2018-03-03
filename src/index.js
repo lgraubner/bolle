@@ -1,36 +1,38 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import differenceInDays from 'date-fns/difference_in_days'
+import parse from 'date-fns/parse'
+import queryString from 'query-string'
 
 import registerServiceWorker from './registerServiceWorker'
 
 import './styles.css'
 
+const DEFAULT_START = new Date(2018, 0, 1)
+
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
-const BASE_NUMBER = 5
-const BASE_DATE = new Date(2018, 0, 1)
+const dateIsValid = date => !isNaN(date.getTime())
 
-const parsePath = () =>
-  window.location.pathname
-    .substr(1)
-    .split('/')
-    .filter(i => i !== '')
+const query = queryString.parse(window.location.search)
 
-const pathParts = parsePath()
-const baseNumber = (pathParts.length && pathParts[0]) || BASE_NUMBER
+const options = Object.assign(
+  {},
+  {
+    number: 5,
+    start: DEFAULT_START
+  },
+  query
+)
 
-let baseDate = BASE_DATE
+const date = parse(options.start)
 
-const tmpDate = pathParts.length && pathParts[1]
-// validate date input
-if (tmpDate && !Number.isNaN(Date.parse(tmpDate))) {
-  baseDate = tmpDate
-}
+const diff = differenceInDays(
+  new Date(),
+  dateIsValid(date) ? date : DEFAULT_START
+)
 
-const diff = differenceInDays(new Date(), new Date(baseDate))
-
-const num = Math.abs(diff) % baseNumber + 1
+const num = Math.abs(diff) % options.number + 1
 const rand = random(1, 11)
 
 const App = () => (
